@@ -269,3 +269,76 @@ Primeramente instalaremos el Apache
 sudo apt-get install apache2
 ```
 
+![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/1.apache.PNG)
+
+A continuación comprobamos si está habilitado y activo:
+
+```bash
+sudo systemctl is-enabled apache2
+sudo systemctl is-active apache2
+```
+
+![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/2.apachenabled.PNG)
+
+![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/3.apacheactived.PNG)
+
+Si en el navegador nos dirigimos a localhost nos aparecerá la pagina de Apache:
+
+![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/3.1apache-local.PNG)
+
+Podemos modificar el `index` y ver los cambios:
+
+![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/5.apachemodificado.PNG)
+
+
+
+Nos interesa mover el `index.html` 
+
+```bash
+sudo mv /var/www/html/index.html /home/master/
+```
+
+Podemos ver la modificación:
+
+![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/6.movido-index.PNG)
+
+Lo comprobamos:
+
+![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/8.actualizacon-apache.PNG)
+
+
+
+El siguiente paso es clonar del repositorio de **`git`** que nos ofrece el tutorial , el proyecto virtual FRONT  a mi maquina :
+
+```bash
+git clone https://github.com/cavanosa/virtualFRONT.git
+```
+
+![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/Captura%20de%20pantalla%20(3).png)
+
+
+
+Tenemos que realizar a continuación una serie de modificaciones , y lo haremos desde el editor `VisualStudioCode`:
+
+```bash
+npm update
+```
+
+![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/11.npm-visual.PNG)
+
+
+
+
+
+Modificamos el vscode:
+
+![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/12.moficacion-code.PNG)
+
+
+
+
+
+
+
+![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/9.subir-virtualFRONT.PNG)
+
