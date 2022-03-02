@@ -322,11 +322,24 @@ Tenemos que realizar a continuación una serie de modificaciones , y lo haremos 
 
 ```bash
 npm update
+npm run ng serve -o
 ```
 
-![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/11.npm-visual.PNG)
+![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/15.1npm.PNG)
+
+![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/15.npm%20run%20ng%20serve%20-o.PNG)
 
 
+
+Creamos el archivo necesario para el despliegue seguidamente:
+
+```bash
+npm run ng build --prod
+```
+
+
+
+![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/16.2.npm%20run....PNG)
 
 
 
@@ -334,11 +347,25 @@ Modificamos el vscode:
 
 ![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/12.moficacion-code.PNG)
 
+Comprobamos:
+
+![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/17.carpeta-dist.PNG)
 
 
 
 
 
+A continuación tendremos que cambiar los permisos:
 
-![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/9.subir-virtualFRONT.PNG)
+```bash
+sudo chown -R master /var/www/html/
+sudo chmod -R 755 /var/www/html/
+```
 
+![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/18.permisos.....PNG)
+
+
+
+Desde `Filezilla` podemos transferir los archivos a `/var/www/html`
+
+![](Tarea%20FTP%20-%20despliegue%20de%20aplicaci%C3%B3n%20en%20VPS.assets/19.filezilla-correcta-FRONT.PNG)
